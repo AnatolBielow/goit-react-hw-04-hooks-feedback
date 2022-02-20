@@ -36,7 +36,7 @@ class App extends React.Component {
       <div className="App-container">
         <Section title="Please leave Feedback">
           <FeedbackOptions
-            options={{ good, neutral, bad }}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.onHandleClick}
           ></FeedbackOptions>
         </Section>
