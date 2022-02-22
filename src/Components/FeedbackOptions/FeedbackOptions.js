@@ -1,9 +1,9 @@
 import { Button } from "./FeedbackOptions.styled";
 import PropTypes from "prop-types";
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
-  return options.map((option) => (
-    <Button key={option} type="button" onClick={() => onLeaveFeedback(option)}>
-      {option}
+  return Object.keys(options).map((key) => (
+    <Button key={key} type="button" onClick={onLeaveFeedback}>
+      {key}
     </Button>
   ));
 }
